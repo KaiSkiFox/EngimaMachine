@@ -47,7 +47,7 @@ do
 						do
 						{
 							Console.Clear();
-							Console.WriteLine("Altering Rotor slot A");
+							Console.WriteLine($"Altering Rotor slot A, Ring set to {R1Pos + 1}");
 							Console.WriteLine("(a) Alter rotor set, (b) Alter Starting Position, (c) Alter Table Position. (any key) to exit");
 
 							checkLetter = Array.IndexOf(rotorSelection, 1);
@@ -78,19 +78,19 @@ do
 									R1Pos = pos - 1;
 									break;
 
-								case ConsoleKey.C:
-									if (checkLetter == -1)
-									{ 
-										Console.WriteLine("Rotor position have no vaild rotor table.");
-										break;
-									}
-									Console.WriteLine("Please enter new Rotor notch position. (A: 1 - Z: 26)");
-									while(!Int32.TryParse(Console.ReadLine(), out pos) || pos > 25 || pos < 0)
-									{
-										Console.WriteLine("Not a vaild starting position");
-									}
-									R1Alphabet = pos - 1;
-									break;
+								// case ConsoleKey.C:
+								// 	if (checkLetter == -1)
+								// 	{ 
+								// 		Console.WriteLine("Rotor position have no vaild rotor table.");
+								// 		break;
+								// 	}
+								// 	Console.WriteLine("Please enter new Rotor notch position. (A: 1 - Z: 26)");
+								// 	while(!Int32.TryParse(Console.ReadLine(), out pos) || pos > 25 || pos < 0)
+								// 	{
+								// 		Console.WriteLine("Not a vaild starting position");
+								// 	}
+								// 	R1Alphabet = pos - 1;
+								// 	break;
 
 								default:
 									alterBreaker = false;
@@ -104,7 +104,7 @@ do
 						do
 						{
 							Console.Clear();
-							Console.WriteLine("Altering Rotor slot B");
+							Console.WriteLine($"Altering Rotor slot B, Ring set to {R2Pos + 1}");
 							Console.WriteLine("(a) Alter rotor set, (b) Alter Starting Position, (c) Alter Table Position. (any key) to exit");
 
 							checkLetter = Array.IndexOf(rotorSelection, 2);
@@ -132,22 +132,22 @@ do
 									{
 										Console.WriteLine("Not a vaild starting position");
 									}
-									R1Pos = pos - 1;
+									R2Pos = pos - 1;
 									break;
 
-								case ConsoleKey.C:
-									if (checkLetter == -1)
-									{ 
-										Console.WriteLine("Rotor position have no vaild rotor table.");
-										break;
-									}
-									Console.WriteLine("Please enter new Rotor notch position. (A: 1 - Z: 26)");
-									while(!Int32.TryParse(Console.ReadLine(), out pos) || pos > 25 || pos < 0)
-									{
-										Console.WriteLine("Not a vaild starting position");
-									}
-									R1Alphabet = pos - 1;
-									break;
+								// case ConsoleKey.C:
+								// 	if (checkLetter == -1)
+								// 	{ 
+								// 		Console.WriteLine("Rotor position have no vaild rotor table.");
+								// 		break;
+								// 	}
+								// 	Console.WriteLine("Please enter new Rotor notch position. (A: 1 - Z: 26)");
+								// 	while(!Int32.TryParse(Console.ReadLine(), out pos) || pos > 25 || pos < 0)
+								// 	{
+								// 		Console.WriteLine("Not a vaild starting position");
+								// 	}
+								// 	R1Alphabet = pos - 1;
+								// 	break;
 
 								default:
 									alterBreaker = false;
@@ -161,7 +161,7 @@ do
 						do
 						{
 							Console.Clear();
-							Console.WriteLine("Altering Rotor slot C");
+							Console.WriteLine($"Altering Rotor slot C, Ring set to {R3Pos + 1}");
 							Console.WriteLine("(a) Alter rotor set, (b) Alter Starting Position, (c) Alter Table Position. (any key) to exit");
 
 							checkLetter = Array.IndexOf(rotorSelection, 3);
@@ -189,22 +189,22 @@ do
 									{
 										Console.WriteLine("Not a vaild starting position");
 									}
-									R1Pos = pos - 1;
+									R3Pos = pos - 1;
 									break;
 
-								case ConsoleKey.C:
-									if (checkLetter == -1)
-									{ 
-										Console.WriteLine("Rotor position have no vaild rotor table.");
-										break;
-									}
-									Console.WriteLine("Please enter new Rotor notch position. (A: 1 - Z: 26)");
-									while(!Int32.TryParse(Console.ReadLine(), out pos) || pos > 25 || pos < 0)
-									{
-										Console.WriteLine("Not a vaild starting position");
-									}
-									R1Alphabet = pos - 1;
-									break;
+								// case ConsoleKey.C:
+								// 	if (checkLetter == -1)
+								// 	{ 
+								// 		Console.WriteLine("Rotor position have no vaild rotor table.");
+								// 		break;
+								// 	}
+								// 	Console.WriteLine("Please enter new Rotor notch position. (A: 1 - Z: 26)");
+								// 	while(!Int32.TryParse(Console.ReadLine(), out pos) || pos > 25 || pos < 0)
+								// 	{
+								// 		Console.WriteLine("Not a vaild starting position");
+								// 	}
+								// 	R1Alphabet = pos - 1;
+								// 	break;
 
 								default:
 									alterBreaker = false;
@@ -236,8 +236,9 @@ do
 						if (R1 != -1 && R2 != -1 && R3 != -1 && reflectorSelection != 0)
 						{
 							Console.WriteLine("Machine rotor set complete");
-                            Console.WriteLine($"Slot A: {rotorLabels[R1]} | Slot B: {rotorLabels[R2]} | Slot C: {rotorLabels[R3]} | Reflector: {reflectorLabels[reflectorSelection--]}");
+                            Console.WriteLine($"Slot A: {rotorLabels[R1]} - {R1Pos + 1}| Slot B: {rotorLabels[R2]} - {R2Pos + 1} | Slot C: {rotorLabels[R3]} - {R3Pos + 1} | Reflector: {reflectorLabels[reflectorSelection--]}");
 							breaker = false;
+							Console.WriteLine("Press Enter to continue...");
                             while (Console.ReadKey(true).Key != ConsoleKey.Enter) {}
 							break;
 						}
@@ -248,7 +249,7 @@ do
 
 						Console.Clear();
 						Console.WriteLine("Machine rotor set misconfigured.");
-						Console.WriteLine($"Slot A: {rotorLabels[R1]} | Slot B: {rotorLabels[R2]} | Slot C: {rotorLabels[R3]} | Reflector: {reflectorLabels[reflectorSelection]}");
+						Console.WriteLine($"Slot A: {rotorLabels[R1]} - {R1Pos + 1}| Slot B: {rotorLabels[R2]} - {R2Pos + 1} | Slot C: {rotorLabels[R3]} - {R3Pos + 1} | Reflector: {reflectorLabels[reflectorSelection]}");
 						Thread.Sleep(4000);
 						break;
 				}
@@ -259,7 +260,7 @@ do
 		case ConsoleKey.E:
 			engimaMachine = new EngimaMachine(R1, R2, R3, reflectorSelection);
 			engimaMachine.AlterAllRotorPos(R1Pos, R2Pos, R3Pos);
-			engimaMachine.AlterAllRotorAlphabet(R1Alphabet, R2Alphabet, R3Alphabet);
+			// engimaMachine.AlterAllRotorAlphabet(R1Alphabet, R2Alphabet, R3Alphabet);
 			Console.WriteLine("Starting encription. Press Enter to complete:\n");
 			
 			while ((input = Console.ReadKey(true).KeyChar) != (char)13)
