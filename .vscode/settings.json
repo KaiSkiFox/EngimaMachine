@@ -1,0 +1,8 @@
+{
+    "dotnet.defaultSolution": "EngimaMachine.sln",
+    "launch": {
+
+
+    },
+    "editor.suggestOnTriggerCharacters": false,
+}

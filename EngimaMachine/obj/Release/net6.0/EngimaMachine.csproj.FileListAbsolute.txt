@@ -1,0 +1,15 @@
+C:\Users\losto\Documents\Fun coding project\EngimaMachine\EngimaMachine\bin\Release\net6.0\EngimaMachine.exe
+C:\Users\losto\Documents\Fun coding project\EngimaMachine\EngimaMachine\bin\Release\net6.0\EngimaMachine.deps.json
+C:\Users\losto\Documents\Fun coding project\EngimaMachine\EngimaMachine\bin\Release\net6.0\EngimaMachine.runtimeconfig.json
+C:\Users\losto\Documents\Fun coding project\EngimaMachine\EngimaMachine\bin\Release\net6.0\EngimaMachine.dll
+C:\Users\losto\Documents\Fun coding project\EngimaMachine\EngimaMachine\bin\Release\net6.0\EngimaMachine.pdb
+C:\Users\losto\Documents\Fun coding project\EngimaMachine\EngimaMachine\obj\Release\net6.0\EngimaMachine.csproj.AssemblyReference.cache
+C:\Users\losto\Documents\Fun coding project\EngimaMachine\EngimaMachine\obj\Release\net6.0\EngimaMachine.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\losto\Documents\Fun coding project\EngimaMachine\EngimaMachine\obj\Release\net6.0\EngimaMachine.AssemblyInfoInputs.cache
+C:\Users\losto\Documents\Fun coding project\EngimaMachine\EngimaMachine\obj\Release\net6.0\EngimaMachine.AssemblyInfo.cs
+C:\Users\losto\Documents\Fun coding project\EngimaMachine\EngimaMachine\obj\Release\net6.0\EngimaMachine.csproj.CoreCompileInputs.cache
+C:\Users\losto\Documents\Fun coding project\EngimaMachine\EngimaMachine\obj\Release\net6.0\EngimaMachine.dll
+C:\Users\losto\Documents\Fun coding project\EngimaMachine\EngimaMachine\obj\Release\net6.0\refint\EngimaMachine.dll
+C:\Users\losto\Documents\Fun coding project\EngimaMachine\EngimaMachine\obj\Release\net6.0\EngimaMachine.pdb
+C:\Users\losto\Documents\Fun coding project\EngimaMachine\EngimaMachine\obj\Release\net6.0\EngimaMachine.genruntimeconfig.cache
+C:\Users\losto\Documents\Fun coding project\EngimaMachine\EngimaMachine\obj\Release\net6.0\ref\EngimaMachine.dll

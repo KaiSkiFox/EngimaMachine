@@ -1,0 +1,5 @@
+C:\Users\losto\Desktop\EngimaMachine.exe
+C:\Users\losto\Desktop\EngimaMachine.dll
+C:\Users\losto\Desktop\EngimaMachine.deps.json
+C:\Users\losto\Desktop\EngimaMachine.runtimeconfig.json
+C:\Users\losto\Desktop\EngimaMachine.pdb
