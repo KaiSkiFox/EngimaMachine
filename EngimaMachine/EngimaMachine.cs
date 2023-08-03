@@ -1,6 +1,8 @@
 
 class EngimaMachine
 {
+	private int[][] PreRotorTable { get; set;}
+
 	private PlugBoard PlugBoardSet { get; set; }
 
 	private Rotor[] RotorSets { get; set; }
@@ -19,6 +21,7 @@ class EngimaMachine
 	private readonly int[] plugBoardTest = new int[] {18, 1, 24, 13, 15, 20, 22, 21, 19, 9, 14, 25, 16, 3, 10, 4, 12, 17, 0, 8, 5, 7, 6, 23, 2, 11};
 	private readonly int[] plugBoardDefault = new int[] {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25};
 
+
 	// default engima machine
 	public EngimaMachine()
 	{
@@ -31,13 +34,13 @@ class EngimaMachine
 	}
 
 	// customize engima machine
-	public EngimaMachine(int rotorSetA, int rotorSetB, int rotorSetC, int reflector, bool plugBoardSkip = false)
+	public EngimaMachine(int rotorSetA, int rotorSetB, int rotorSetC, int reflector, List<int[]> preRotateTable, bool plugBoardSkip = false)
 	{
 		var rand = new Random();
-		int[] randomRotorA = Rotor.PopulateTable();
-		int[] randomRotorB = Rotor.PopulateTable();
-		int[] randomRotorC = Rotor.PopulateTable();
-		int[] randomReflector = Reflector.PopulateTable();
+		int[] randomRotorA = preRotateTable[0];
+		int[] randomRotorB = preRotateTable[1];
+		int[] randomRotorC = preRotateTable[2];
+		int[] randomReflector = preRotateTable[3];
 		int[][] rotorSets = new int[][] {rotorITable, rotorIITable, rotorIIITable, rotorIVTable, rotorVTable, randomRotorA, randomRotorB, randomRotorC};
 		int[][] reflectorSets = new int[][] {reflectorATable, reflectorBTable, reflectorCTable, randomReflector};
 		int[] rotorNotch = new int[] {17, 5, 22, 10, 26, rand.Next(), rand.Next(), rand.Next()};

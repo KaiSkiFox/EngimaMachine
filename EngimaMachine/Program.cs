@@ -2,6 +2,13 @@
 using System.Threading;
 
 EngimaMachine engimaMachine;
+List<int[]> refRandomRotor = new List<int[]>
+{
+    Rotor.PopulateTable(),
+    Rotor.PopulateTable(),
+    Rotor.PopulateTable(),
+    Reflector.PopulateTable()
+};
 int R1 = 0;
 int R2 = 1;
 int R3 = 2;
@@ -254,11 +261,10 @@ do
 						break;
 				}
 			}while (breaker);
-
 			break;
 
 		case ConsoleKey.E:
-			engimaMachine = new EngimaMachine(R1, R2, R3, reflectorSelection);
+			engimaMachine = new EngimaMachine(R1, R2, R3, reflectorSelection, refRandomRotor);
 			engimaMachine.AlterAllRotorPos(R1Pos, R2Pos, R3Pos);
 			// engimaMachine.AlterAllRotorAlphabet(R1Alphabet, R2Alphabet, R3Alphabet);
 			Console.WriteLine("Starting encription. Press Enter to complete:\n");
@@ -273,7 +279,7 @@ do
 			break;
 
 		case ConsoleKey.D:
-			engimaMachine = new EngimaMachine(R1, R2, R3, reflectorSelection);
+			engimaMachine = new EngimaMachine(R1, R2, R3, reflectorSelection, refRandomRotor);
 			engimaMachine.AlterAllRotorPos(R1Pos, R2Pos, R3Pos);
 			Console.WriteLine("Starting decription. Press Enter to complete:\n");
 
@@ -287,7 +293,7 @@ do
 			break;
 
 		case ConsoleKey.W:
-			engimaMachine = new EngimaMachine(R1, R2, R3, reflectorSelection, true);
+			engimaMachine = new EngimaMachine(R1, R2, R3, reflectorSelection, refRandomRotor, true);
 			engimaMachine.AlterAllRotorPos(R1Pos, R2Pos, R3Pos);
 			engimaMachine.AlterAllRotorAlphabet(R1Alphabet, R2Alphabet, R3Alphabet);
 			engimaMachine.RotorSettingExport(rotorLabels[R1], rotorLabels[R2], rotorLabels[R3], reflectorLabels[reflectorSelection]);
