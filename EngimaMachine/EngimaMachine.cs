@@ -37,10 +37,11 @@ class EngimaMachine
 	public EngimaMachine(int rotorSetA, int rotorSetB, int rotorSetC, int reflector, List<int[]> preRotateTable, bool plugBoardSkip = false)
 	{
 		var rand = new Random();
-		int[] randomRotorA = preRotateTable[0];
-		int[] randomRotorB = preRotateTable[1];
-		int[] randomRotorC = preRotateTable[2];
-		int[] randomReflector = preRotateTable[3];
+		int[] randomRotorA = new int[26], randomRotorB = new int[26], randomRotorC = new int[26], randomReflector = new int[26];
+		Array.Copy(preRotateTable[0], randomRotorA, 26);
+		Array.Copy(preRotateTable[1], randomRotorB, 26);
+		Array.Copy(preRotateTable[2], randomRotorC, 26);
+		Array.Copy(preRotateTable[3], randomReflector, 26);
 		int[][] rotorSets = new int[][] {rotorITable, rotorIITable, rotorIIITable, rotorIVTable, rotorVTable, randomRotorA, randomRotorB, randomRotorC};
 		int[][] reflectorSets = new int[][] {reflectorATable, reflectorBTable, reflectorCTable, randomReflector};
 		int[] rotorNotch = new int[] {17, 5, 22, 10, 26, rand.Next(), rand.Next(), rand.Next()};
