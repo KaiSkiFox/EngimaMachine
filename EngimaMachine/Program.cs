@@ -54,7 +54,7 @@ do
 						do
 						{
 							Console.Clear();
-							Console.WriteLine($"Altering Rotor slot A, Ring set to {R1Pos + 1}");
+							Console.WriteLine($"Altering Rotor slot A, {rotorLabels[R1]} Ring set to {R1Pos + 1}");
 							Console.WriteLine("(a) Alter rotor set, (b) Alter Starting Position, (c) Alter Table Position. (any key) to exit");
 
 							checkLetter = Array.IndexOf(rotorSelection, 1);
@@ -111,7 +111,7 @@ do
 						do
 						{
 							Console.Clear();
-							Console.WriteLine($"Altering Rotor slot B, Ring set to {R2Pos + 1}");
+							Console.WriteLine($"Altering Rotor slot B, {rotorLabels[R2]} Ring set to {R2Pos + 1}");
 							Console.WriteLine("(a) Alter rotor set, (b) Alter Starting Position, (c) Alter Table Position. (any key) to exit");
 
 							checkLetter = Array.IndexOf(rotorSelection, 2);
@@ -168,7 +168,7 @@ do
 						do
 						{
 							Console.Clear();
-							Console.WriteLine($"Altering Rotor slot C, Ring set to {R3Pos + 1}");
+							Console.WriteLine($"Altering Rotor slot C, {rotorLabels[R3]} Ring set to {R3Pos + 1}");
 							Console.WriteLine("(a) Alter rotor set, (b) Alter Starting Position, (c) Alter Table Position. (any key) to exit");
 
 							checkLetter = Array.IndexOf(rotorSelection, 3);
