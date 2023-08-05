@@ -74,11 +74,11 @@ class EngimaMachine
 // Rotor position changes current position and pointing output by lenght (Simulate moving by length)
 	
 
-	public void AlterAllRotorAlphabet(int notch1, int notch2, int notch3)
+	public void AlterAllRotorNotch(int notch1, int notch2, int notch3)
 	{
-		this.AlterRotorAlphabet(0, notch1);
-		this.AlterRotorAlphabet(1, notch2);
-		this.AlterRotorAlphabet(2, notch3);
+		RotorSets[0].AlterNotchPosition(notch1);
+		RotorSets[1].AlterNotchPosition(notch2);
+		RotorSets[2].AlterNotchPosition(notch3);
 	}
 
 	public void AlterRotorAlphabet(int rotor, int notch)

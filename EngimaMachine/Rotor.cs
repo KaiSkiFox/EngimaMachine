@@ -66,6 +66,10 @@ class Rotor
 		this.ExchangeTable = exchangeTable;
 	}
 
+	public void AlterNotchPosition(int newNotchPosition)
+	{
+		rotateSequence = newNotchPosition;
+	}
 	// Query exchange table and return the interger(alphabet) back.
 	public int Encode (int requestInput)
 	{

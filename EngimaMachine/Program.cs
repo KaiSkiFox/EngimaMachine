@@ -12,7 +12,7 @@ List<int[]> refRandomRotor = new List<int[]>
 int R1 = 0;
 int R2 = 1;
 int R3 = 2;
-int R1Pos = 0, R2Pos = 0, R3Pos = 0, R1Alphabet = 0, R2Alphabet = 0, R3Alphabet = 0;
+int R1Pos = 0, R2Pos = 0, R3Pos = 0, R1Notch = 0, R2Notch = 0, R3Notch = 0;
 int reflectorSelection = 1;
 
 string[] rotorLabels = new string[] {"Rotor I", "Rotor II", "Rotor III", "Rotor IV", "Rotor V", "Random Wiring", "Random Wiring", "RandomWiring", "No Label"};
@@ -54,7 +54,7 @@ do
 						do
 						{
 							Console.Clear();
-							Console.WriteLine($"Altering Rotor slot A, {rotorLabels[R1]} Ring set to {R1Pos + 1}");
+							Console.WriteLine($"Altering Rotor slot A, {rotorLabels[R1]} Ring set to {R1Pos + 1}, notch set to {R1Notch}.");
 							Console.WriteLine("(a) Alter rotor set, (b) Alter Starting Position, (c) Alter Table Position. (any key) to exit");
 
 							checkLetter = Array.IndexOf(rotorSelection, 1);
@@ -96,7 +96,7 @@ do
 								// 	{
 								// 		Console.WriteLine("Not a vaild starting position");
 								// 	}
-								// 	R1Alphabet = pos - 1;
+								// 	R1Notch = pos - 1;
 								// 	break;
 
 								default:
@@ -111,7 +111,7 @@ do
 						do
 						{
 							Console.Clear();
-							Console.WriteLine($"Altering Rotor slot B, {rotorLabels[R2]} Ring set to {R2Pos + 1}");
+							Console.WriteLine($"Altering Rotor slot B, {rotorLabels[R2]} Ring set to {R2Pos + 1}, notch set to {R2Notch}.");
 							Console.WriteLine("(a) Alter rotor set, (b) Alter Starting Position, (c) Alter Table Position. (any key) to exit");
 
 							checkLetter = Array.IndexOf(rotorSelection, 2);
@@ -153,7 +153,7 @@ do
 								// 	{
 								// 		Console.WriteLine("Not a vaild starting position");
 								// 	}
-								// 	R1Alphabet = pos - 1;
+								// 	R1Notch = pos - 1;
 								// 	break;
 
 								default:
@@ -168,7 +168,7 @@ do
 						do
 						{
 							Console.Clear();
-							Console.WriteLine($"Altering Rotor slot C, {rotorLabels[R3]} Ring set to {R3Pos + 1}");
+							Console.WriteLine($"Altering Rotor slot C, {rotorLabels[R3]} Ring set to {R3Pos + 1}, notch set to {R3Notch}.");
 							Console.WriteLine("(a) Alter rotor set, (b) Alter Starting Position, (c) Alter Table Position. (any key) to exit");
 
 							checkLetter = Array.IndexOf(rotorSelection, 3);
@@ -210,7 +210,7 @@ do
 								// 	{
 								// 		Console.WriteLine("Not a vaild starting position");
 								// 	}
-								// 	R1Alphabet = pos - 1;
+								// 	R1Notch = pos - 1;
 								// 	break;
 
 								default:
@@ -266,7 +266,7 @@ do
 		case ConsoleKey.E:
 			engimaMachine = new EngimaMachine(R1, R2, R3, reflectorSelection, refRandomRotor);
 			engimaMachine.AlterAllRotorPos(R1Pos, R2Pos, R3Pos);
-			// engimaMachine.AlterAllRotorAlphabet(R1Alphabet, R2Alphabet, R3Alphabet);
+			engimaMachine.AlterAllRotorNotch(R1Notch, R2Notch, R3Notch);
 			Console.WriteLine("Starting encription. Press Enter to complete:\n");
 			
 			while ((input = Console.ReadKey(true).KeyChar) != (char)13)
@@ -281,6 +281,7 @@ do
 		case ConsoleKey.D:
 			engimaMachine = new EngimaMachine(R1, R2, R3, reflectorSelection, refRandomRotor);
 			engimaMachine.AlterAllRotorPos(R1Pos, R2Pos, R3Pos);
+			engimaMachine.AlterAllRotorNotch(R1Notch, R2Notch, R3Notch);
 			Console.WriteLine("Starting decription. Press Enter to complete:\n");
 
 			while ((input = Console.ReadKey(true).KeyChar) != (char)13)
@@ -295,7 +296,7 @@ do
 		case ConsoleKey.W:
 			engimaMachine = new EngimaMachine(R1, R2, R3, reflectorSelection, refRandomRotor, true);
 			engimaMachine.AlterAllRotorPos(R1Pos, R2Pos, R3Pos);
-			engimaMachine.AlterAllRotorAlphabet(R1Alphabet, R2Alphabet, R3Alphabet);
+			engimaMachine.AlterAllRotorNotch(R1Notch, R2Notch, R3Notch);
 			engimaMachine.RotorSettingExport(rotorLabels[R1], rotorLabels[R2], rotorLabels[R3], reflectorLabels[reflectorSelection]);
 			Console.WriteLine("Press Enter to exit...");
 			while (Console.ReadKey(true).Key != ConsoleKey.Enter) {}
