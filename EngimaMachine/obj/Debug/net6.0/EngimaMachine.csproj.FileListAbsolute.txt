@@ -13,3 +13,18 @@ C:\Users\losto\Documents\Fun coding project\EngimaMachine\EngimaMachine\obj\Debu
 C:\Users\losto\Documents\Fun coding project\EngimaMachine\EngimaMachine\obj\Debug\net6.0\EngimaMachine.pdb
 C:\Users\losto\Documents\Fun coding project\EngimaMachine\EngimaMachine\obj\Debug\net6.0\EngimaMachine.genruntimeconfig.cache
 C:\Users\losto\Documents\Fun coding project\EngimaMachine\EngimaMachine\obj\Debug\net6.0\ref\EngimaMachine.dll
+D:\SYSbackup\Code Backup\Fun coding project\EngimaMachine\EngimaMachine\bin\Debug\net6.0\EngimaMachine.exe
+D:\SYSbackup\Code Backup\Fun coding project\EngimaMachine\EngimaMachine\bin\Debug\net6.0\EngimaMachine.deps.json
+D:\SYSbackup\Code Backup\Fun coding project\EngimaMachine\EngimaMachine\bin\Debug\net6.0\EngimaMachine.runtimeconfig.json
+D:\SYSbackup\Code Backup\Fun coding project\EngimaMachine\EngimaMachine\bin\Debug\net6.0\EngimaMachine.dll
+D:\SYSbackup\Code Backup\Fun coding project\EngimaMachine\EngimaMachine\bin\Debug\net6.0\EngimaMachine.pdb
+D:\SYSbackup\Code Backup\Fun coding project\EngimaMachine\EngimaMachine\obj\Debug\net6.0\EngimaMachine.GeneratedMSBuildEditorConfig.editorconfig
+D:\SYSbackup\Code Backup\Fun coding project\EngimaMachine\EngimaMachine\obj\Debug\net6.0\EngimaMachine.AssemblyInfoInputs.cache
+D:\SYSbackup\Code Backup\Fun coding project\EngimaMachine\EngimaMachine\obj\Debug\net6.0\EngimaMachine.AssemblyInfo.cs
+D:\SYSbackup\Code Backup\Fun coding project\EngimaMachine\EngimaMachine\obj\Debug\net6.0\EngimaMachine.csproj.CoreCompileInputs.cache
+D:\SYSbackup\Code Backup\Fun coding project\EngimaMachine\EngimaMachine\obj\Debug\net6.0\EngimaMachine.sourcelink.json
+D:\SYSbackup\Code Backup\Fun coding project\EngimaMachine\EngimaMachine\obj\Debug\net6.0\EngimaMachine.dll
+D:\SYSbackup\Code Backup\Fun coding project\EngimaMachine\EngimaMachine\obj\Debug\net6.0\refint\EngimaMachine.dll
+D:\SYSbackup\Code Backup\Fun coding project\EngimaMachine\EngimaMachine\obj\Debug\net6.0\EngimaMachine.pdb
+D:\SYSbackup\Code Backup\Fun coding project\EngimaMachine\EngimaMachine\obj\Debug\net6.0\EngimaMachine.genruntimeconfig.cache
+D:\SYSbackup\Code Backup\Fun coding project\EngimaMachine\EngimaMachine\obj\Debug\net6.0\ref\EngimaMachine.dll

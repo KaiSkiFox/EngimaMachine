@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "yBsCvX5FBz63sNbl+n/L9zZkUwD1tPnrDz7+spoJOV5pTGOHiB2gIO8i7QNnduzatY+3lhZT8NORY1k+okiy1w==",
+  "dgSpecHash": "arRzL8GdsGQFkUA4yhnJX7ANHhfQM0Wd95atOnh7GGbTW0wMdaib/13w2XeWmAQlBX5UjRmANR1L+moAksx2YA==",
   "success": true,
-  "projectFilePath": "c:\\Users\\losto\\Documents\\Fun coding project\\EngimaMachine\\EngimaMachine\\EngimaMachine.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "D:\\SYSbackup\\Code Backup\\Fun coding project\\EngimaMachine\\EngimaMachine\\EngimaMachine.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Kai\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.29\\microsoft.netcore.app.ref.6.0.29.nupkg.sha512",
+    "C:\\Users\\Kai\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.29\\microsoft.windowsdesktop.app.ref.6.0.29.nupkg.sha512",
+    "C:\\Users\\Kai\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.29\\microsoft.aspnetcore.app.ref.6.0.29.nupkg.sha512",
+    "C:\\Users\\Kai\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.29\\microsoft.netcore.app.host.win-x64.6.0.29.nupkg.sha512"
+  ],
   "logs": []
 }

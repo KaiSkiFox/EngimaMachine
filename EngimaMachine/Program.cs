@@ -49,7 +49,7 @@ do
 
 				switch (Console.ReadKey(true).Key)
 				{
-					case ConsoleKey.A:
+					case ConsoleKey.A: //## DO CHANGE IT METHOD SETTING TO CUT DOWN CODE LENGTH ##//
 						bool alterBreaker = true;
 						do
 						{
@@ -66,7 +66,7 @@ do
 									parser = int.TryParse(Console.ReadLine(), out useRotorSelection);
 									if (parser && useRotorSelection >= 0 && useRotorSelection < 6)
 									{
-										rotorSelection[useRotorSelection] = 1;
+										rotorSelection[0] = useRotorSelection;
 									}
 									break;
 
@@ -123,7 +123,7 @@ do
 									parser = int.TryParse(Console.ReadLine(), out useRotorSelection);
 									if (parser && useRotorSelection >= 0 && useRotorSelection < 6)
 									{
-										rotorSelection[useRotorSelection] = 2;
+										rotorSelection[1] = useRotorSelection;
 									}
 									break;
 
@@ -180,7 +180,7 @@ do
 									parser = int.TryParse(Console.ReadLine(), out useRotorSelection);
 									if (parser && useRotorSelection >= 0 && useRotorSelection < 6)
 									{
-										rotorSelection[useRotorSelection] = 3;
+										rotorSelection[2] = useRotorSelection;
 									}
 									break;
 
