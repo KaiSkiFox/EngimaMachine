@@ -1,6 +1,8 @@
 class Rotor
 {
-	// look up table for the random interger, [0] -> 4 etc. An array of 26 interger and non-repeating random interger contained within.
+	/// <summary>
+	/// look up table for the random interger, [0] -> 4 etc. An array of 26 interger and non-repeating random interger contained within.
+	/// </summary>
 	public int[] ExchangeTable { get; set; }
 	
 	// the cascade number which allows the next rotor to rotate.
@@ -27,7 +29,10 @@ class Rotor
 			}
 		}
 	}
-	// empty constructor for reflector.
+
+	/// <summary>
+	/// empty constructor for reflector.
+	/// </summary
 	public Rotor()
 	{
 		var rand = new Random();
@@ -35,14 +40,19 @@ class Rotor
 		ExchangeTable = PopulateTable();
 	}
 
+	/// <summary>
+	/// Default random rotor
+	/// </summary>
 	public Rotor(int[] exchangeTable)
 	{
 		var rand = new Random();
 		RotateSequence = rand.Next(0, 26);
-		ExchangeTable =  exchangeTable;
+		ExchangeTable = exchangeTable;
 	}
 
-	// Rotor COnstructor, select the sequence for cascade and generate a random table.
+	/// <summary>
+	/// Rotor Constructor, select the sequence for cascade and generate a random table.
+	/// </summary>
 	public Rotor(int rotateSequence)
 	{
 		if (RotateSequence < 0 || rotateSequence > 26)
@@ -54,7 +64,9 @@ class Rotor
 		this.ExchangeTable = PopulateTable();
 	}
 
-	// Rotor Constructor, select the sequence for cascade and preset table.
+	/// <summary>
+	/// Rotor Constructor, select the sequence for cascade and preset table. This is the perfered method of rotor construction.
+	/// </summary>
 	public Rotor(int rotateSequence, int[] exchangeTable)
 	{
 		if (RotateSequence < 0 || rotateSequence > 26)
@@ -66,23 +78,33 @@ class Rotor
 		this.ExchangeTable = exchangeTable;
 	}
 
+	/// <summary>
+	/// Change Rotor Notch position to a new interger.
+	/// </summary>
 	public void AlterNotchPosition(int newNotchPosition)
 	{
 		rotateSequence = newNotchPosition;
 	}
-	// Query exchange table and return the interger(alphabet) back.
+
+	/// <summary>
+	/// Query exchange table and return the Table[input] back.
+	/// </summary>
 	public int Encode (int requestInput)
 	{
 		return ExchangeTable[requestInput];
 	}
 
-	//back tracing roto table.
+	/// <summary>
+	/// back tracing rotor table and return the index of Table[input] back.
+	/// </summary>
 	public int Decode (int requestInput)
 	{
 		return Array.IndexOf(ExchangeTable, requestInput);
 	}
 
-	//generating randomized rotor table
+	/// <summary>
+	/// generating randomized rotor table.
+	/// </summary>
 	public static int[] PopulateTable()
 	{
 		var rand = new Random();
@@ -107,6 +129,9 @@ class Rotor
 		return table;
 	}
 
+	/// <summary>
+	/// Move rotor input table forword by certain interger.
+	/// </summary>
 	public void AlterAlphabet(int length)
 	{
 		int holder;
@@ -119,7 +144,9 @@ class Rotor
 		// RotateSequence = (holder < 0) ? 26 + holder : holder;
 	}
 
-	//alter rotor starting position
+	/// <summary>
+	/// Move rotor output table forword by certain interger.
+	/// </summary>
 	public void ForwardRotate(int length)
 	{
 		if (length > 1)
@@ -153,7 +180,9 @@ class Rotor
 		RotateSequence = (RotateSequence - length < 0) ? 26 + RotateSequence - length : RotateSequence - length;
 	}
 
-	//alter rotor starting position
+	/// <summary>
+	/// Move rotor output table backword by certain interger.
+	/// </summary>
 	public void BackwardRotate(int length)
 	{
 		if (length > 1)
@@ -186,7 +215,9 @@ class Rotor
 		}
 	}
 
-// Rotate the current Rotor and check if the cascade is needed (next rotor rotation) need to consider !!! Double stepping of the middle rotor !!!
+	/// <summary>
+	/// Rotate the current Rotor and check if the cascade is needed (next rotor rotation) need to consider !!! Double stepping of the middle rotor !!!
+	/// </summary>
 	public bool RotateTable(bool inCascade)
 	{
 		bool cascadeSignal = RotateSequence == 1;

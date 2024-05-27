@@ -1,27 +1,32 @@
 class Reflector : Rotor
 {
-	// constructor that generate its own reflector exchange table.
+	/// <summary>
+	/// constructor that generate its own reflector exchange table.
+	/// </summary>
 	public Reflector()
 	{
 		this.ExchangeTable = Reflector.PopulateTable();
 	}
 
-	// Constructor that takes in preset table.
-
+	/// <summary>
+	/// Constructor that takes in preset table.
+	/// </summary>
 	public Reflector(int[] exchangeTable)
 	{
 		this.ExchangeTable = exchangeTable;
 	}
 	
-
-	// Simple look up for the numbered pair.
+	/// <summary>
+	/// Simple look up for the numbered pair.
+	/// </summary>
 	public int Query (int requestInput)
 	{
 		return ExchangeTable[requestInput];
 	}
 
-	// A table generator that generate a table of randomly selected number pairs
-
+	/// <summary>
+	/// A table generator that generate a table of randomly selected number pairs
+	/// </summary>
 	public static int[] PopulateTable()
 	{
 		var rand = new Random();

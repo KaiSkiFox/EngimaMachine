@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EngimaMachine")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+42f677db1dd115ce0bef476999b8ca791367d1f6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5bd3ed28a156ba1385ac82eb1dc834cebf062eae")]
 [assembly: System.Reflection.AssemblyProductAttribute("EngimaMachine")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EngimaMachine")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
